@@ -1,0 +1,37 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+
+</head>
+<div class=".container-fluid">
+
+	<h1 class="text-center jumbotron"><kbd>ROBOCOM</kbd> attendence</h1>
+	<h4>Enter Your Name :</h4>
+
+	<form action="/process" >
+		<input type="text" class="form-control " placeholder="name" name="Name">
+		<br>
+		<input type="submit" class="btn btn-dark btn-block" name="" value="SUBMIT">
+	</form>
+	<br><br>
+		
+	<h3 >Date: {{date}}</h3>
+	<h5 >PRESENT</h5>
+
+	<div class="form-group" >
+	<ol class="list-group">
+	{% for i in main %}
+	<li class="list-group-item">{{i}}</li>
+	{% endfor %}
+	</ol>
+	</div>
+</div>
+
+<br><br>
+<a href="/done"  class="btn btn-outline-dark btn-block" role="button" >generate list (<i>for admin</i>)</a>
+
+<h5 class="text-center jumbotron" style="margin-bottom:0">made with &hearts; by <kbd>AR</kbd></h5>
