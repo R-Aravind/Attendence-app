@@ -1,6 +1,7 @@
 from django.http import HttpResponse as hr 
 from django.http import JsonResponse as jr 
 from django.http import HttpResponseRedirect as hrr
+#hacktoberfest
 
 from django.shortcuts import render
 
